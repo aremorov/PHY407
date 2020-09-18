@@ -2,6 +2,7 @@
 Bifurcation and Chaos:
 This code is designed to numerically produce the population of a species based on
 the logistic map algorithm and to calculate the Lyapunov exponent for random shifts in initial conditions.
+Please run codes for different parts of the question separately.
 """
 import numpy as np
 import matplotlib.pyplot as plt
