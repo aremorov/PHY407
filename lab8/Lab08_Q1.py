@@ -13,9 +13,9 @@ target = 10**(-6)   # Target accuracy
 # Create array of potentials:
 phi = np.zeros([M+1,M+1],float)
 
-
+#For no overrelaxation set w = 0. I avoided writing two set of codes for the sake of reducing repetition.
 delta = 10.0  #random number for delta, should be bigger than the target to start the while loop going.
-w = 0.9   #value of omega subject to change.
+w = 0.9   #value of omega subject to change. Set w = 0 for no overrelaxation.
 while delta>target:
 
     delta = 0.0
