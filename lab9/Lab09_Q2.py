@@ -7,20 +7,8 @@ Notes:
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy.fft import rfft,irfft, fft2
-#from scipy.fftpack import dct,idct,dst,idst
-###PART-A###:
-"""
-The first equation on E satistfies the boundary condition since for 
-p,q = 0 or P,the sine terms will go to zero (their product) and therefore, 
-the whole expression vanishes. That is what we want at the boundaries for E.
 
-It is the same thing with current flux. The current flux should be zero at the
-boundaries. The division by P in the arguments of sine functions in the 
-decomposition guarantees that J will vanish whenever p or q becomes P or 0.
-
-SAME STORY WITH THE OTHER TWO (EXPLAIN THIS MORE AND ASK TA).
-"""
-###PART-B###:
+###PART-B,C###:
 
 tao = 0.01  #subject to change.
 
@@ -269,7 +257,7 @@ plt.xlabel("Time (s)",fontsize=14)
 plt.ylabel("Ez",fontsize=14)
 plt.show()
 
-
+###Part-d###:
 #plotting  the maximum amplitude of the electric field for varying omega:
 
 omegas = np.arange(0,9,0.25)  #omega values.
@@ -281,6 +269,7 @@ for omega in omegas:
     Ez.append(EH_update(omega,time)[0][15,15])
   max_amp.append(max(Ez))
 
+###Part-e###:
 #plotting the amplitude values in respect to omega:
 plt.plot(omegas,max_amp)
 plt.title("Maximum Amplitude of the Electric Field vs. Omega",fontsize=12)
