@@ -32,7 +32,7 @@ J0 = 1  #J0 value
 m = 1  #m-mode
 n = 1  #n-mode
 c = 1  #velocity if light
-w = 3.75  #omega value. Subject to change to the normal frequency for other calculations.
+w = 3.75  #omega value. Subject to change to the normal frequency for other calculations in part-e.
 def fc_update(E,X,Y,J):
     """
     Updates Fourier coefficients of everything except flux.
@@ -269,7 +269,7 @@ for omega in omegas:
     Ez.append(EH_update(omega,time)[0][15,15])
   max_amp.append(max(Ez))
 
-###Part-e###:
+
 #plotting the amplitude values in respect to omega:
 plt.plot(omegas,max_amp)
 plt.title("Maximum Amplitude of the Electric Field vs. Omega",fontsize=12)
