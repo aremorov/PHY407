@@ -2,7 +2,7 @@
 Lab09 
 Question-2
 Author: Arya Kimiaghalam
-Notes:
+Notes:Please run plotting codes separately.
 """
 import numpy as np
 import matplotlib.pyplot as plt
