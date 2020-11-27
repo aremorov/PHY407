@@ -2,6 +2,7 @@
 Lab10
 Question-1
 Author: Arya Kimiaghalam
+please run the function calls separately.
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -65,6 +66,8 @@ def single_traj_plotter(start,L,N):
     plt.xlabel("x")
     plt.ylabel("y")
 
+#generating results for part-a:
+single_traj_plotter([50,50],101,5000)
 ####################################Part-b&c##################################:
 def bp(point,L):
     """
@@ -206,8 +209,8 @@ def DLA(L,start):
 
 def DLA_b(L,start):
     """
-    Same as the DLa function except that it returns all the trajectories
-    not just the location of the stukc particles. this is used for generating
+    Same as the DLA function except that it returns all the trajectories
+    not just the location of the stuck particles. this is used for generating
     movies for part b to feed the movie_plotter function.
     """
     stuck_particles = []  #list of the location of stuck particles.
