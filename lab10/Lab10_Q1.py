@@ -134,16 +134,16 @@ def common(lst1, lst2):
 
 def plotter(coords,L):
     """
-    plots the final position of all stuck particles as a sequence of LxL images.
+    plots the final position of all stuck particles.
     """
     image = np.zeros((L,L))   #initializing the image array.
     for coord in coords:
         image[coord[0],coord[1]] = 1  #marking the positions.
-        plt.imshow(image)
-        plt.plot("Particle Map")
-        plt.xlabel("x")
-        plt.ylabel("y")
-        plt.show()
+    plt.imshow(image)
+    plt.plot("Particle Map")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.show()
     
     
     
