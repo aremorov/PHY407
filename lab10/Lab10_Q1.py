@@ -185,7 +185,7 @@ def DLA(L,start):
     start: starting point.
     """
     stuck_particles = []  #list of the location of stuck particles.
-    while start not in stuck_particles:
+    while start not in stuck_particles and common(stuck_particles,surround(start)) == False:
         locations =[]     #location of one of the introduced particles.
         locations.append(start)  #first point of it is always the starting point.
         inter_pos = start  #intermediate position starts from the starting point.
@@ -202,7 +202,7 @@ def DLA(L,start):
                 stuck = True
             else:
                 pass
-
+    stuck_particles.append(start)  #adding the starting point as the last stuck point there will be when the stuck particles reach the center.
 
     return stuck_particles
 
@@ -215,7 +215,7 @@ def DLA_b(L,start):
     """
     stuck_particles = []  #list of the location of stuck particles.
     all_tracks = []
-    while start not in stuck_particles:
+    while start not in stuck_particles and common(stuck_particles,surround(start)) == False:
         locations =[]     #location of one of the introduced particles.
         locations.append(start)  #first point of it is always the starting point.
         inter_pos = start  #intermediate position starts from the starting point.
@@ -234,7 +234,7 @@ def DLA_b(L,start):
                 stuck = True
             else:
                 pass
-
+    all_tracks.append([start])  #when the starting point gets stuck, its track is a single point list.
 
     return all_tracks
 
