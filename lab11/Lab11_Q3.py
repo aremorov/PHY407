@@ -52,6 +52,7 @@ N = 30  # length of protein
 T = 0.5  # temperature for Monte Carlo
 n = 9500000  # number of Monte Carlo steps
 
+##Temperature array for part c:
 #T_f = 0.5
 #T_steps = 4
 #T_i = T_f + T_steps - 1
@@ -59,6 +60,8 @@ n = 9500000  # number of Monte Carlo steps
 #for step in range(T_steps):
 #    T_array[step*n//T_steps:(step+1)*n//T_steps] = (T_i-T_f)*(1-step/(T_steps-1)) + T_f
 
+
+#Temperature array for part d:
 T_array_2 = []
 T_steps_2 = np.array(list(reversed(list(np.arange(0.5,10,0.5)))))
 for temp in T_steps_2:
@@ -189,6 +192,7 @@ plt.savefig('final_protein_T{0:d}_N{1:d}_n{2:d}.pdf'.format(int(10*T), N, n),
 print('Energy averaged over last half of simulations is: {0:.2f}'
       .format(np.mean(energy_array[n//2:])))
 
+#plotting the energyies for different temperatures.
 plt.figure()
 plt.plot(T_steps_2,E_array_step_mean, color = "r")
 plt.errorbar(T_steps_2,E_array_step_mean, yerr = energy_sd,fmt='--o', color = "k")
